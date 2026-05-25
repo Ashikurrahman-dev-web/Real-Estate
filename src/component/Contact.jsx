@@ -182,7 +182,7 @@ className="glass-card p-8 text-center flex flex-col items-center border border-g
                 className="w-full bg-transparent border-b border-on-surface-variant/30 py-4 px-2 text-on-background/80 focus:outline-none focus:border-blue-500 transition-colors cursor-pointer appearance-none"
                 defaultValue=""
               >
-                <option value="" disabled className="flex bg-blue-500 text-on-surface-variant/50">Select A Time<span className="material-symbols-outlined text-blue-500">arrow_downward</span></option>
+                <option value="" disabled className="flex bg-blue-500 text-on-surface-variant/50">Select A Time</option>
                 <option value="morning" className="bg-blue-500 text-white">Morning (10:00 AM - 12:00 PM)</option>
                 <option value="afternoon" className="bg-blue-500 text-white">Afternoon (02:00 PM - 05:00 PM)</option>
                 <option value="evening" className="bg-blue-500 text-white">Evening (07:00 PM - 11:00 PM)</option>
