@@ -43,156 +43,200 @@ const StrategySection = () => {
       });
  }, []);
   return (
-    <section id="strategy" className="relative min-h-screen bg-gradient-to-b from-white to-slate-100 overflow-hidden flex items-center justify-center px-4 py-24">
+    <section
+  id="strategy"
+  className="relative overflow-hidden bg-gradient-to-b from-white to-slate-100 px-4 py-20 md:py-28"
+>
+  {/* Background Glow */}
+  <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] md:h-[600px] md:w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/20 blur-3xl" />
+
+  <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center">
+    
+    {/* Heading */}
+    <div
+      ref={divRef}
+      className="text-center text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-[4px] md:tracking-[6px] text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500 mb-16 md:mb-24"
+    >
+      Our Strategy
+    </div>
+
+    {/* Desktop Layout */}
+    <div className="relative hidden lg:flex w-full h-[700px] items-center justify-center">
       
-      {/* Background Glow */}
-      <div className="absolute w-[600px] h-[600px] bg-cyan-400/20 blur-3xl rounded-full" />
+      {/* SVG Lines */}
+      <svg
+        className="absolute inset-0 h-full w-full"
+        viewBox="0 0 1200 700"
+        fill="none"
+      >
+        <motion.line
+          x1="420"
+          y1="240"
+          x2="560"
+          y2="320"
+          stroke="#2563eb"
+          strokeWidth="8"
+          strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          transition={{ duration: 1 }}
+        />
 
-      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center">
-        
-        {/* Heading */}
-        
-    <div ref={divRef} 
-            
- className="h text-5xl md:text-6xl font-black uppercase tracking-[6px] text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500 mb-24"
+        <motion.line
+          x1="420"
+          y1="460"
+          x2="560"
+          y2="380"
+          stroke="#2563eb"
+          strokeWidth="8"
+          strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          transition={{ duration: 1.2 }}
+        />
+
+        <motion.line
+          x1="780"
+          y1="240"
+          x2="640"
+          y2="320"
+          stroke="#2563eb"
+          strokeWidth="8"
+          strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          transition={{ duration: 1.4 }}
+        />
+
+        <motion.line
+          x1="780"
+          y1="460"
+          x2="640"
+          y2="380"
+          stroke="#2563eb"
+          strokeWidth="8"
+          strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          transition={{ duration: 1.6 }}
+        />
+      </svg>
+
+      {/* Side Circles */}
+      {items.map((item, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.5,
+            delay: i * 0.2,
+          }}
+          whileHover={{
+            scale: 1.08,
+            rotate: 2,
+          }}
+          className={`absolute ${item.position}`}
         >
-          Our Strategy
+          <Circle text={item.title} />
+        </motion.div>
+      ))}
+
+      {/* Center Circle */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.3 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+        }}
+        whileHover={{
+          scale: 1.03,
+        }}
+        className="relative z-20"
+      >
+        <div className="h-[320px] w-[320px] rounded-full bg-blue-700 p-3 shadow-[0_0_60px_rgba(37,99,235,0.4)]">
+          <div className="h-full w-full rounded-full bg-white p-3">
+            <div className="flex h-full w-full items-center justify-center rounded-full border-[10px] border-blue-500 px-8 text-center">
+              <p className="text-lg font-semibold leading-relaxed text-slate-700">
+                We focus on delivering comprehensively mixed-use
+                developments that are of high quality and offer high
+                returns to investor.
+              </p>
+            </div>
+          </div>
         </div>
+      </motion.div>
+    </div>
 
-        {/* Main Diagram */}
-        <div className="relative w-full h-[700px] flex flex-wrap items-center justify-center">
+    {/* Mobile + Tablet Layout */}
+    <div className="flex lg:hidden w-full flex-col items-center gap-8">
+      
+      {/* Center Circle */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.3 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+        }}
+      >
+        <div className="h-[240px] w-[240px] sm:h-[280px] sm:w-[280px] rounded-full bg-blue-700 p-3 shadow-[0_0_40px_rgba(37,99,235,0.4)]">
+          <div className="h-full w-full rounded-full bg-white p-3">
+            <div className="flex h-full w-full items-center justify-center rounded-full border-[8px] border-blue-500 px-5 text-center">
+              <p className="text-sm sm:text-base font-semibold leading-relaxed text-slate-700">
+                We focus on delivering comprehensively mixed-use
+                developments that are of high quality and offer high
+                returns to investor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
 
-          {/* SVG Lines */}
-          <svg
-            className="absolute inset-0 w-full h-full"
-            viewBox="0 0 1200 700"
-            fill="none"
-          >
-            <motion.line
-              x1="420"
-              y1="240"
-              x2="560"
-              y2="320"
-              stroke="#2563eb"
-              strokeWidth="8"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              transition={{ duration: 1 }}
-            />
-
-            <motion.line
-              x1="420"
-              y1="460"
-              x2="560"
-              y2="380"
-              stroke="#2563eb"
-              strokeWidth="8"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              transition={{ duration: 1.2 }}
-            />
-
-            <motion.line
-              x1="780"
-              y1="240"
-              x2="640"
-              y2="320"
-              stroke="#2563eb"
-              strokeWidth="8"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              transition={{ duration: 1.4 }}
-            />
-
-            <motion.line
-              x1="780"
-              y1="460"
-              x2="640"
-              y2="380"
-              stroke="#2563eb"
-              strokeWidth="8"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              transition={{ duration: 1.6 }}
-            />
-          </svg>
-
-          {/* Side Circles */}
-          {items.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: i * 0.2,
-              }}
-              whileHover={{
-                scale: 1.08,
-                rotate: 2,
-              }}
-              className={`absolute ${item.position}`}
-            >
-              <Circle text={item.title} />
-            </motion.div>
-          ))}
-
-          {/* Center Circle */}
+      {/* Items Grid */}
+      <div className="grid w-full max-w-2xl grid-cols-2 gap-6 sm:gap-8">
+        {items.map((item, i) => (
           <motion.div
-            initial={{ opacity: 0, scale: 0.3 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{
-              duration: 0.8,
-              type: "spring",
+              duration: 0.5,
+              delay: i * 0.1,
             }}
-            whileHover={{
-              scale: 1.03,
-            }}
-            className="relative z-20"
+            className="flex justify-center"
           >
-            <div className="w-[320px] h-[320px] rounded-full bg-blue-700  p-3 shadow-[0_0_60px_rgba(37,99,235,0.4)]">
-              
-              <div className="w-full h-full rounded-full bg-white p-3">
-                
-                <div className="w-full h-full rounded-full border-[10px] border-blue-500 flex items-center justify-center text-center px-8">
-                  <p className="text-slate-700 leading-relaxed font-semibold text-lg">
-                    We focus on delivering comprehensively mixed-use
-                    developments that are of high quality and offer high returns
-                    to investor.
-                  </p>
-                </div>
-
-              </div>
-            </div>
+            <Circle text={item.title} />
           </motion.div>
-        </div>
-
-        {/* Mission Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mt-10 max-w-2xl text-center"
-        >
-          <h3 className="text-5xl md:text-6xl font-black uppercase tracking-[6px] text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500">
-            Our Mission
-          </h3>
-
-          <p className="text-slate-600 text-lg leading-relaxed">
-            We work to deliver quality aspirational real estate developments
-            for our clients and build eye-catching buildings to make their
-            dream comes true.
-          </p>
-        </motion.div>
+        ))}
       </div>
-    </section>
+    </div>
+
+    {/* Mission */}
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+      className="mt-20 max-w-3xl text-center"
+    >
+      <h3 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-[4px] md:tracking-[6px] text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500">
+        Our Mission
+      </h3>
+
+      <p className="mt-6 text-base sm:text-lg leading-relaxed text-slate-600 px-2">
+        We work to deliver quality aspirational real estate developments
+        for our clients and build eye-catching buildings to make their
+        dream comes true.
+      </p>
+    </motion.div>
+  </div>
+</section>
   );
 };
 
