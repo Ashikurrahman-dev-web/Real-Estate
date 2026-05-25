@@ -32,7 +32,7 @@ const HeroSlider = () => {
   modules={[Autoplay, EffectFade, Navigation]}
   effect="fade"
   autoplay={{
-    delay: 3000,
+    delay: 2000,
     disableOnInteraction: false,
   }}
   speed={2000}
