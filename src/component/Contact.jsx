@@ -53,8 +53,7 @@ const Contact = () => {
 
     const formData = new FormData(e.target);
     
-    // নিচে 'YOUR_ACCESS_KEY_HERE' এর জায়গায় Web3Forms থেকে পাওয়া ফ্রি কী-টি বসাবেন
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "42d04a17-c053-46e0-acee-6c3b355c3903");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
