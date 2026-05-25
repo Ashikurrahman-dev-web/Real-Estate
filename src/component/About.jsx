@@ -183,7 +183,7 @@ className="bg-gradient-to-r from-blue-400 via-cyan-500 text-white px-6 py-3 roun
             </div>
 
             <h4 className="text-lg sm:text-xl font-bold text-on-background">
-              Fast Development
+              Quality Development
             </h4>
 
             <p className="text-[10px] sm:text-xs text-on-surface-variant mt-2 tracking-widest uppercase font-bold">
