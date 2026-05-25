@@ -36,8 +36,7 @@ export default function LeafMap() {
           icon={customIcon}
         >
           <Popup>
-            54 Palashpur, Gas Road Kadamtoli,
-            Dhaka-1236
+            127 Azimpur Rd, Dhaka-1205(2nd Floor), Bangladesh.
           </Popup>
         </Marker>
       </MapContainer>
