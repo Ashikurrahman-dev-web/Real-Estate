@@ -132,7 +132,7 @@ Construct Real Estate & Developers Company Limited believes in doing its bit for
               </h4>
 
               <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed">
-                127 Azimpur Rd, Dhaka-1205(2nd Floor), Bangladesh.
+                Bank Tower (1st Floor) Titas Gas Road, Shonir Akhra Dhaka-1236
               </p>
             </div>
 

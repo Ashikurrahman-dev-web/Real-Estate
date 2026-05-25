@@ -32,11 +32,11 @@ export default function LeafMap() {
         />
 
         <Marker
-          position={[23.72607, 90.38412]}
+          position={[23.69659, 90.45074]}
           icon={customIcon}
         >
           <Popup>
-            127 Azimpur Rd, Dhaka-1205(2nd Floor), Bangladesh.
+            Bank Tower (1st Floor) Titas Gas Road, Shonir Akhra Dhaka-1236
           </Popup>
         </Marker>
       </MapContainer>
