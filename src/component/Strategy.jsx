@@ -31,7 +31,7 @@ const items = [
 const StrategySection = () => {
   const divRef = useRef(null);
  useEffect(() => {
-  gsap.from(".heading", {
+  gsap.from(".h", {
         opacity: 0,
         x: -50,
         filter: "blur(10px)",
@@ -54,13 +54,13 @@ const StrategySection = () => {
         
     <div ref={divRef} 
             
- className="heading text-5xl md:text-6xl font-black uppercase tracking-[6px] text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500 mb-24"
+ className="h text-5xl md:text-6xl font-black uppercase tracking-[6px] text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500 mb-24"
         >
           Our Strategy
         </div>
 
         {/* Main Diagram */}
-        <div className="relative w-full h-[700px] flex items-center justify-center">
+        <div className="relative w-full h-[700px] flex flex-wrap items-center justify-center">
 
           {/* SVG Lines */}
           <svg

@@ -39,7 +39,7 @@ const Contact = () => {
   return (
     <section className="max-w-[80%] mx-auto px-6 py-[120px]" id="contact">
       {/* Header */}
-      <div ref={divRef} className=" heading text-center mb-20">
+      <div ref={divRef} className="heading text-center mb-20">
 <h2 className="text-5xl md:text-6xl font-black uppercase tracking-[6px] text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500">
         Contact Us
       </h2>

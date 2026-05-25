@@ -16,7 +16,7 @@ const About = () => {
 const [showMap, setShowMap] = useState(false);
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".about-heading", {
+      gsap.from(".about", {
         opacity: 0,
         x: -50,
         filter: "blur(10px)",
@@ -72,7 +72,7 @@ const [showMap, setShowMap] = useState(false);
   <div className="max-w-7xl mx-auto">
     
     {/* Heading */}
-    <div className="about-heading text-center space-y-3 sm:space-y-4 mb-14 sm:mb-20">
+    <div className="about text-center space-y-3 sm:space-y-4 mb-14 sm:mb-20">
 <h2 className="text-5xl md:text-6xl font-black uppercase tracking-[6px] text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500">
        About Us
       </h2>
