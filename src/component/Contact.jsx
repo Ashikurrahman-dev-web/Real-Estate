@@ -103,7 +103,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="glass-card p-8 text-center flex flex-col items-center border border-green-500/5 hover:border-blue-500/30 shadow-xl hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)] group hover:bg-surface-container-high/60 transition-all duration-500"
+className="glass-card p-8 text-center flex flex-col items-center border border-green-500/5 hover:border-blue-500/30 shadow-xl hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)] group hover:bg-surface-container-high/60 transition-all duration-500"
                 >
                   <div className={`w-12 h-12 rounded-2xl ${method.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500`}>
                     <span className="text-xl">{method.icon}</span>
@@ -132,7 +132,7 @@ const Contact = () => {
         {/* RIGHT — Contact Form */}
         <div className="space-y-8">
           <p className="text-sm font-bold text-on-surface-variant uppercase tracking-[0.2em] text-center md:text-left">
-            Scedule a Meeting
+            Schedule a Meeting
           </p>
           
           {/* নতুন যুক্ত করা ফর্ম */}
@@ -142,7 +142,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6 bg-surface-container-high/20 p-8 rounded-3xl border border-white/5 backdrop-blur-md"
+    className="space-y-6 bg-surface-container-high/20 p-8 rounded-3xl border border-green-500/5 hover:border-blue-500/30 shadow-xl hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)] backdrop-blur-md"
           >
             {/* Full Name Input */}
             <div>
@@ -175,27 +175,12 @@ const Contact = () => {
                 className="w-full bg-transparent border-b border-on-surface-variant/30 py-4 px-2 text-on-background placeholder-on-surface-variant/50 focus:outline-none focus:border-blue-500 transition-colors"
               />
             </div>
-
-            {/* Select Time Dropdown */}
-            <div>
-              <select 
-                name="time_slot"
-                className="w-full bg-transparent border-b border-on-surface-variant/30 py-4 px-2 text-on-background/80 focus:outline-none focus:border-blue-500 transition-colors cursor-pointer appearance-none"
-                defaultValue=""
-              >
-                <option value="" disabled className="bg-neutral-900 text-on-surface-variant/50">Select A Time</option>
-                <option value="morning" className="bg-neutral-900 text-on-background">Morning (10:00 AM - 12:00 PM)</option>
-                <option value="afternoon" className="bg-neutral-900 text-on-background">Afternoon (02:00 PM - 05:00 PM)</option>
-                <option value="evening" className="bg-neutral-900 text-on-background">Evening (07:00 PM - 09:00 PM)</option>
-              </select>
-            </div>
-
-            {/* Submit Button */}
+{/* Submit Button */}
             <div className="pt-4">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full md:w-auto px-10 py-4 bg-transparent border border-on-background text-on-background font-bold uppercase tracking-wider rounded-xl hover:bg-on-background hover:text-background transition-all duration-300 disabled:opacity-50"
+                className="w-full md:w-auto px-10 py-4 bg-transparent border border-on-background text-on-background font-bold uppercase tracking-wider rounded-xl hover:bg-blue-500 hover:text-background transition-all duration-300 disabled:opacity-50"
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>
