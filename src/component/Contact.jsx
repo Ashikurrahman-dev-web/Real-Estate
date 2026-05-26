@@ -83,16 +83,13 @@ const Contact = () => {
         <h2 className="text-5xl md:text-6xl font-black uppercase tracking-[6px] text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500">
           Contact Us
         </h2>
-        <h1 className="text-h1 text-on-background mt-3">
-          Get in Touch
-        </h1>
       </div>
 
       <div className="grid md:grid-cols-2 gap-20 items-start">
         {/* LEFT — Talk to me cards */}
         <div className="space-y-8">
           <p className="text-sm font-bold text-on-surface-variant uppercase tracking-[0.2em] text-center md:text-left">
-            Talk to me
+            Talk to Us Directly
           </p>
           <div className="grid gap-6">
             {contactMethods.map((method, i) => (

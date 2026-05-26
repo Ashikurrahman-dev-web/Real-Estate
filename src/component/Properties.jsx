@@ -62,7 +62,7 @@ className="w-[60%] sm:col-span-2 glass-card p-6 sm:p-8 rounded-[28px] sm:rounded
 <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed">
   54 Palashpur, Gas Road Kadamtoli, Dhaka-1236
 </p>
-              <p className="flex text-sm sm:text-base text-on-surface-variant leading-relaxed">
+              <p className="flex text-sm sm:text-base text-blue-500 leading-relaxed">
                  Below is a glimpse of our ongoing project.<span className="material-symbols-outlined text-blue-500">arrow_downward</span>
               </p>
             </div>
