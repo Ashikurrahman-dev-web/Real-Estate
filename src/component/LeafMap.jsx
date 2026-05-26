@@ -21,7 +21,7 @@ export default function LeafMap() {
   return (
     <div className="w-full h-full">
       <MapContainer
-        center={[23.72607, 90.38412]}
+        center={[23.69659, 90.45074]}
         zoom={15}
         scrollWheelZoom={true}
         className="w-full h-full rounded-3xl"
